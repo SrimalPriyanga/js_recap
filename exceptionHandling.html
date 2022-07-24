@@ -1,88 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exception Handling</title>
-  </head>
-  <body>
-    <h3>Exception Handling</h3>
-    <ul>
-      <li>ReferenceError</li>
-      <li>TypeError</li>
-      <li>URIError</li>
-      <li>SyntaxError</li>
-      <li>EvalError *</li>
-      <li>Press F12</li>
-    </ul>
 
-    <script>
-      "use strict";
-      // Definition
-      try {
-        // Some code that could fail
-      } catch (error) {
-        // Do somthing with the error
-      } finally {
-        // This block is optional
-        // This code always runs
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exception Handling</title>
+</head>
 
-      // Example try, catch, finally
-      let result;
-      try {
-        result = x / 10;
-        console.log("Codes after thr error occure line will never run");
-      } catch (error) {
-        console.error(error);
-        console.log(error);
-        console.log(error.name);
-        console.log(error.message);
-      } finally {
-        console.log("1 Hey this is final block, ALWAYS RUN");
-      }
+<body>
+  <h3>Exception Handling</h3>
+  <ul>
+    <li>ReferenceError</li>
+    <li>TypeError</li>
+    <li>URIError</li>
+    <li>SyntaxError</li>
+    <li>EvalError *</li>
+    <li>Press F12</li>
+  </ul>
 
-      // Example throw
-      try {
-        result = x / 10;
-        console.log("Codes after thr error occure line will never run");
-      } catch (error) {
-        throw {
-          name: "CustomError",
-          message: "This error occured: " + error.message,
-        };
-      } finally {
-        console.log("2 Hey this is final block, ALWAYS RUN");
-      }
+  <script>
+    "use strict";
+    // Definition
+    try {
+      // Some code that could fail
+    } catch (error) {
+      // Do something with the error
+    } finally {
+      // This block is optional
+      // This code always runs
+    }
 
-      // Error Handling
-      function handleError(error) {
-        switch (error.name) {
-          case "ReferenceError":
-            console.log(error.name + " " + error.message);
-            break;
-          case "RangeError":
-            console.log(error.name + " " + error.message);
-            break;
-          case "TypeError":
-            console.log(error.name + " " + error.message);
-            break;
-          case "URIError":
-            console.log(error.name + " " + error.message);
-            break;
-          case "SyntaxError":
-            console.log(error.name + " " + error.message);
-            break;
-          case "EvalError":
-            console.log(error.name + " " + error.message);
-            break;
-          default:
-            console.log(
-              "Error Type: " + error.name + " Message: " + error.message
-            );
-            break;
-        }
+    // Example try, catch, finally
+    let result;
+    try {
+      result = x / 10;
+      console.log("Codes after thr error occurs line will never run");
+    } catch (error) {
+      console.error(error);
+      console.log(error);
+      console.log(error.name);
+      console.log(error.message);
+    } finally {
+      console.log("1 Hey this is final block, ALWAYS RUN");
+    }
+
+    // Example throw
+    try {
+      result = x / 10;
+      console.log("Codes after thr error occurs line will never run");
+    } catch (error) {
+      throw {
+        name: "CustomError",
+        message: "This error occured: " + error.message,
+      };
+    } finally {
+      console.log("2 Hey this is final block, ALWAYS RUN");
+    }
+
+    // Error Handling
+    function handleError(error) {
+      switch (error.name) {
+        case "ReferenceError":
+          console.log(error.name + " " + error.message);
+          break;
+        case "RangeError":
+          console.log(error.name + " " + error.message);
+          break;
+        case "TypeError":
+          console.log(error.name + " " + error.message);
+          break;
+        case "URIError":
+          console.log(error.name + " " + error.message);
+          break;
+        case "SyntaxError":
+          console.log(error.name + " " + error.message);
+          break;
+        case "EvalError":
+          console.log(error.name + " " + error.message);
+          break;
+        default:
+          console.log(
+            "Error Type: " + error.name + " Message: " + error.message
+          );
+          break;
       }
-    </script>
-  </body>
+    }
+  </script>
+</body>
+
 </html>
