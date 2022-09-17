@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closures in Javascript</title>
+</head>
+
+<body>
+  <button id="root">click</button>
+  <script>
+    function x() {
+      let value = 10;
+      return function y() {
+        console.log(value);
+      }
+    }
+    let z = x();
+    console.log(z)
+    z()
+    document.getElementById('root')
+      .addEventListener('click',
+        function name(params) {
+          console.log('Click')
+        })
+
+  </script>
+
+</body>
+
+</html>
