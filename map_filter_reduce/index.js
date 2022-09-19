@@ -58,6 +58,11 @@ const users = [
   // Find users whose age is below 30
   const results = users.filter((user) => user.age < 30);
   // console.log(results);
+
+  const arr = [1, 2, 3, 4];
+  const arr2 = arr.filter((item) => item % 2);
+  console.log(arr2);
+
 }
 
 // Reduce
@@ -105,5 +110,16 @@ const users = [
     }
     return acc;
   }, []);
-  // console.log(reduceResults);
+  console.log(reduceResults);
+
+  const arr = [1, 2, 3, 4];
+  console.log(
+    arr.reduce((acc, current) => {
+      if (current % 2) {
+        console.log(current, acc);
+        acc.push(current);
+      }
+      return acc;
+    }, [])
+  );
 }
